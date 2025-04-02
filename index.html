@@ -1,0 +1,149 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>عبدالمجيد الثويني</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background: black;
+      font-family: 'Cairo', sans-serif;
+      color: white;
+      height: 100%;
+    }
+
+    #intro {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: black;
+      z-index: 9999;
+    }
+
+    #main-content {
+      display: none;
+      text-align: center;
+      padding: 20px;
+      animation: fadeIn 2s ease forwards;
+      opacity: 0;
+    }
+
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+
+    .stars {
+      background: linear-gradient(-45deg, #0f0f0f, #1a1a2e, #2c2c54, #0f3460);
+      background-size: 400% 400%;
+      animation: gradientBG 20s ease infinite;
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      z-index: -1;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    img.profile {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      margin-top: 30px;
+      object-fit: cover;
+      border: 4px solid #fff94d;
+      box-shadow: 0 0 30px #fff94d;
+      animation: pulse 3s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+
+    h1 {
+      font-size: 28px;
+      color: #fff94d;
+      text-shadow: 0 0 10px #fff94d, 0 0 30px #fff94d;
+      margin: 20px 0 10px;
+    }
+
+    p.bio {
+      color: #ccc;
+      white-space: pre-line;
+      margin-top: 10px;
+    }
+
+    .links {
+      margin-top: 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      align-items: center;
+    }
+
+    .links a {
+      display: block;
+      width: 90%;
+      max-width: 420px;
+      padding: 15px;
+      border-radius: 10px;
+      background: #1c1c1c;
+      color: #fff94d;
+      text-decoration: none;
+      font-weight: bold;
+      border: 1px solid #fff94d;
+    }
+
+    video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+  <div id="intro">
+    <video autoplay muted playsinline onended="showMain()">
+      <source src="https://cdn.pixabay.com/video/2023/10/26/188880-879134279_large.mp4" type="video/mp4">
+      متصفحك لا يدعم الفيديو.
+    </video>
+  </div>
+
+  <div class="stars"></div>
+  <div id="main-content">
+    <img src="profile.jpg" alt="عبدالمجيد الثويني" class="profile">
+    <h1>عبدالمجيد الثويني</h1>
+    <p class="bio">حائل📍
+عاشق للتصوير 📸
+مهتم بالتكنولوجيا 👨‍💻
+متمكن في التصميم والتعديل ✂️</p>
+    <div class="links">
+      <a href="https://www.tiktok.com/@majeed.png" target="_blank">TikTok</a>
+      <a href="https://www.instagram.com/majeed.png" target="_blank">Instagram</a>
+      <a href="https://www.youtube.com/@abdulmajeed.Al-Thuwaini" target="_blank">YouTube</a>
+      <a href="https://www.facebook.com/share/1BDae5WGRH/?mibextid=wwXIfr" target="_blank">Facebook</a>
+      <a href="https://majeedpng.online" target="_blank">Website</a>
+    </div>
+  </div>
+
+  <script>
+    function showMain() {
+      document.getElementById('intro').style.display = 'none';
+      document.getElementById('main-content').style.display = 'block';
+    }
+  </script>
+</body>
+</html>
