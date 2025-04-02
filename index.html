@@ -11,13 +11,15 @@
       margin: 0;
       padding: 0;
       overflow: hidden;
+overflow-x: hidden;
+overflow-y: hidden;
       background: black;
       font-family: 'Cairo', sans-serif;
       color: white;
     }
 
     /* شاشة تحميل */
-    #preloader {
+    /* #preloader {
       background: black;
       position: fixed;
       top: 0;
@@ -30,7 +32,7 @@
       justify-content: center;
     }
 
-    .loader {
+    */ .loader {
       border: 8px solid #222;
       border-top: 8px solid #fff94d;
       border-radius: 50%;
@@ -136,6 +138,8 @@
       border: 1px solid #fff94d;
       position: relative;
       overflow: hidden;
+overflow-x: hidden;
+overflow-y: hidden;
       animation: fadeInUp 0.8s ease forwards;
       opacity: 0;
     }
@@ -153,7 +157,7 @@
   </style>
 </head>
 <body>
-  <div id="preloader"><div class="loader"></div></div>
+  
   <audio autoplay loop>
     <source src="https://cdn.pixabay.com/download/audio/2023/03/06/audio_7a49b4d74d.mp3?filename=ambient-fantasy-140123.mp3" type="audio/mp3">
   </audio>
@@ -174,10 +178,6 @@
     </div>
   </div>
 
-  <script>
-    window.addEventListener("load", () => {
-      document.getElementById("preloader").style.display = "none";
-    });
-  </script>
+  
 </body>
 </html>
