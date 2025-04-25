@@ -1,0 +1,16 @@
+name: Keep Codespace Alive
+
+on:
+  schedule:
+    - cron: '0 */6 * * *' # كل 6 ساعات
+  workflow_dispatch:
+
+jobs:
+  keep-alive:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Keep Alive
+        run: echo "I am alive!"
